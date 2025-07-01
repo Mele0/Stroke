@@ -143,19 +143,19 @@ All analysis is performed in R (`main_analysis.R`) using:
 ## 📈 Figures
 
 <p align="center">
-  <img src="results/plots/forest_plot_rtw_sex.png" width="500"/>
+  <img src="Results/Plots/aim_1_log_OR.png" width="500"/>
   <br>
-  <em>Figure 1. Forest plot of hazard ratios for return to work stratified by sex.</em>
+  <em>Figure 1. Forest plot of odds ratios for return to work.</em>
 </p>
 
 <p align="center">
-  <img src="results/plots/cox_curve_essvr_vs_usual.png" width="500"/>
+  <img src="Results/Plots/aim_2_cox_HR.png" width="500"/>
   <br>
-  <em>Figure 2. Kaplan-Meier curves for return-to-work (ESSVR vs. usual care).</em>
+  <em>Figure 2. Forest plot of hazard ratios for return to work.</em>
 </p>
 
 <p align="center">
-  <img src="results/plots/health_score_by_sex_age.png" width="500"/>
+  <img src="Results/Plots/effect_sex.png" width="500"/>
   <br>
   <em>Figure 3. Predicted health score at 12 months by age and sex.</em>
 </p>
