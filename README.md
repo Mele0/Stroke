@@ -88,6 +88,80 @@ All analysis is performed in R (`main_analysis.R`) using:
 - Complete-case analysis used to handle inconsistencies
 
 ---
+## 📊 Key Results Summary
+
+### Table 1: Participant Characteristics by Trial Arm
+
+| Variable                 | Overall (N=1002) | Usual Care (N=481) | ESSVR (N=521) |
+|--------------------------|------------------|---------------------|---------------|
+| **Age (median, IQR)**    | 62 (55–65)       | 62 (56–66)          | 62 (56–67)    |
+| **Hours Worked/Week**    | 40 (25–45)       | 40 (30–45)          | 40 (25–45)    |
+| **Male**                 | 652 (65%)        | 311 (65%)           | 341 (65%)     |
+| **Female**               | 350 (35%)        | 170 (35%)           | 180 (35%)     |
+| **Stroke Severity**      |                  |                     |               |
+| – Mild                   | 431 (43%)        | 215 (45%)           | 216 (41%)     |
+| – Moderate               | 420 (42%)        | 197 (41%)           | 223 (43%)     |
+| – Severe                 | 151 (15%)        | 69 (14%)            | 82 (16%)      |
+
+--
+
+### Table 2: Logistic Regression – Predictors of ESSVR Completion
+
+| Predictor               | Adjusted OR | 95% CI           | p-value |
+|------------------------|-------------|------------------|---------|
+| Permanent              | 1.88        | 1.06 – 3.33      | 0.031   |
+| Self-Employed          | 2.52        | 1.18 – 5.60      | 0.019   |
+| Severe Stroke          | 0.43        | 0.25 – 0.73      | 0.002   |
+| Age (per year)         | 0.97        | 0.94 – 0.99      | 0.037   |
+
+--
+
+### Table 3: Cox Model – Return to Work
+
+| Variable                       | HR    | 95% CI          | p-value |
+|--------------------------------|-------|------------------|---------|
+| ESSVR (0–6 months)             | 1.35  | 0.74 – 2.27      | 0.319   |
+| ESSVR (6–12 months)            | 2.00  | 1.10 – 3.56      | 0.028   |
+| Fixed-Term Contract            | 0.62  | 0.48 – 0.79      | <0.001  |
+| Severe Stroke                  | 0.53  | 0.43 – 0.66      | <0.001  |
+| Age (per year)                | 0.98  | 0.97 – 0.99      | <0.001  |
+| Male (vs. Female)              | 1.26  | 1.09 – 1.47      | 0.002   |
+
+--
+
+### Table 4: Linear Model – Health Score at 12 Months
+
+| Variable          | Effect Estimate (β) | 95% CI            | p-value |
+|------------------|----------------------|-------------------|---------|
+| ESSVR             | 1.38                 | −0.3 to 3.1       | 0.100   |
+| Moderate Stroke   | −4.6                | −6.4 to −2.8      | <0.001  |
+| Severe Stroke     | −8.3                | −10.9 to −5.7     | <0.001  |
+| Age               | −0.16               | −0.27 to −0.05    | 0.002   |
+
+---
+
+## 📈 Figures
+
+<p align="center">
+  <img src="results/plots/forest_plot_rtw_sex.png" width="500"/>
+  <br>
+  <em>Figure 1. Forest plot of hazard ratios for return to work stratified by sex.</em>
+</p>
+
+<p align="center">
+  <img src="results/plots/cox_curve_essvr_vs_usual.png" width="500"/>
+  <br>
+  <em>Figure 2. Kaplan-Meier curves for return-to-work (ESSVR vs. usual care).</em>
+</p>
+
+<p align="center">
+  <img src="results/plots/health_score_by_sex_age.png" width="500"/>
+  <br>
+  <em>Figure 3. Predicted health score at 12 months by age and sex.</em>
+</p>
+
+
+---
 
 ## 📌 Conclusion
 
@@ -100,11 +174,4 @@ This study demonstrates that ESSVR significantly increases return-to-work succes
 If using this repository or findings, please cite:
 
 > Meléndez, A. *Effectiveness of an Early Vocational Rehabilitation Programme to Support Return to Work for Stroke Survivors*. Imperial College London, 2025.
-
----
-
-## 📬 Contact
-
-For questions or collaboration inquiries, contact:  
-**Alex Meléndez** – `amr24@ic.ac.uk`
 
