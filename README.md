@@ -92,6 +92,22 @@ All analysis is performed in R (`main_analysis.R`) using:
 
 ### Table 1: Participant Characteristics by Trial Arm
 
+<div align="center">
+  <h3>Table 1: Participant Characteristics by Trial Arm</h3>
+  <table border="1" cellpadding="6" cellspacing="0">
+    <tr><th>Variable</th><th>Overall (N=1002)</th><th>Usual Care (N=481)</th><th>ESSVR (N=521)</th></tr>
+    <tr><td><b>Age (median, IQR)</b></td><td>62 (55–65)</td><td>62 (56–66)</td><td>62 (56–67)</td></tr>
+    <tr><td><b>Hours Worked/Week</b></td><td>40 (25–45)</td><td>40 (30–45)</td><td>40 (25–45)</td></tr>
+    <tr><td><b>Male</b></td><td>652 (65%)</td><td>311 (65%)</td><td>341 (65%)</td></tr>
+    <tr><td><b>Female</b></td><td>350 (35%)</td><td>170 (35%)</td><td>180 (35%)</td></tr>
+    <tr><td><b>Stroke Severity</b></td><td></td><td></td><td></td></tr>
+    <tr><td>  Mild</td><td>431 (43%)</td><td>215 (45%)</td><td>216 (41%)</td></tr>
+    <tr><td>  Moderate</td><td>420 (42%)</td><td>197 (41%)</td><td>223 (43%)</td></tr>
+    <tr><td>  Severe</td><td>151 (15%)</td><td>69 (14%)</td><td>82 (16%)</td></tr>
+  </table>
+</div>
+
+
 | Variable                 | Overall (N=1002) | Usual Care (N=481) | ESSVR (N=521) |
 |--------------------------|------------------|---------------------|---------------|
 | **Age (median, IQR)**    | 62 (55–65)       | 62 (56–66)          | 62 (56–67)    |
@@ -131,61 +147,6 @@ All analysis is performed in R (`main_analysis.R`) using:
 | Moderate Stroke   | −4.6                | −6.4 to −2.8      | <0.001  |
 | Severe Stroke     | −8.3                | −10.9 to −5.7     | <0.001  |
 | Age               | −0.16               | −0.27 to −0.05    | 0.002   |
-
-<div align="center">
-  <table style="border-spacing: 50px 10px;">
-    <tr>
-      <td valign="top">
-        <h3>Table 1: Participant Characteristics by Trial Arm</h3>
-        <table border="1" cellpadding="6" cellspacing="0">
-          <tr><th>Variable</th><th>Overall (N=1002)</th><th>Usual Care (N=481)</th><th>ESSVR (N=521)</th></tr>
-          <tr><td><b>Age (median, IQR)</b></td><td>62 (55–65)</td><td>62 (56–66)</td><td>62 (56–67)</td></tr>
-          <tr><td><b>Hours Worked/Week</b></td><td>40 (25–45)</td><td>40 (30–45)</td><td>40 (25–45)</td></tr>
-          <tr><td><b>Male</b></td><td>652 (65%)</td><td>311 (65%)</td><td>341 (65%)</td></tr>
-          <tr><td><b>Female</b></td><td>350 (35%)</td><td>170 (35%)</td><td>180 (35%)</td></tr>
-          <tr><td><b>Stroke Severity</b></td><td></td><td></td><td></td></tr>
-          <tr><td>  Mild</td><td>431 (43%)</td><td>215 (45%)</td><td>216 (41%)</td></tr>
-          <tr><td>  Moderate</td><td>420 (42%)</td><td>197 (41%)</td><td>223 (43%)</td></tr>
-          <tr><td>  Severe</td><td>151 (15%)</td><td>69 (14%)</td><td>82 (16%)</td></tr>
-        </table>
-      </td>
-      <td valign="top">
-        <h3>Table 2: Logistic Regression – Predictors of ESSVR Completion</h3>
-        <table border="1" cellpadding="6" cellspacing="0">
-          <tr><th>Predictor</th><th>Adjusted OR</th><th>95% CI</th><th>p-value</th></tr>
-          <tr><td>Permanent</td><td>1.88</td><td>1.06 – 3.33</td><td>0.031</td></tr>
-          <tr><td>Self-Employed</td><td>2.52</td><td>1.18 – 5.60</td><td>0.019</td></tr>
-          <tr><td>Severe Stroke</td><td>0.43</td><td>0.25 – 0.73</td><td>0.002</td></tr>
-          <tr><td>Age (per year)</td><td>0.97</td><td>0.94 – 0.99</td><td>0.037</td></tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top">
-        <h3>Table 3: Cox Model – Return to Work</h3>
-        <table border="1" cellpadding="6" cellspacing="0">
-          <tr><th>Variable</th><th>HR</th><th>95% CI</th><th>p-value</th></tr>
-          <tr><td>ESSVR (0–6 months)</td><td>1.35</td><td>0.74 – 2.27</td><td>0.319</td></tr>
-          <tr><td>ESSVR (6–12 months)</td><td>2.00</td><td>1.10 – 3.56</td><td>0.028</td></tr>
-          <tr><td>Fixed-Term Contract</td><td>0.62</td><td>0.48 – 0.79</td><td>&lt;0.001</td></tr>
-          <tr><td>Severe Stroke</td><td>0.53</td><td>0.43 – 0.66</td><td>&lt;0.001</td></tr>
-          <tr><td>Age (per year)</td><td>0.98</td><td>0.97 – 0.99</td><td>&lt;0.001</td></tr>
-          <tr><td>Male (vs. Female)</td><td>1.26</td><td>1.09 – 1.47</td><td>0.002</td></tr>
-        </table>
-      </td>
-      <td valign="top">
-        <h3>Table 4: Linear Model – Health Score at 12 Months</h3>
-        <table border="1" cellpadding="6" cellspacing="0">
-          <tr><th>Variable</th><th>Effect Estimate (β)</th><th>95% CI</th><th>p-value</th></tr>
-          <tr><td>ESSVR</td><td>1.38</td><td>−0.3 to 3.1</td><td>0.100</td></tr>
-          <tr><td>Moderate Stroke</td><td>−4.6</td><td>−6.4 to −2.8</td><td>&lt;0.001</td></tr>
-          <tr><td>Severe Stroke</td><td>−8.3</td><td>−10.9 to −5.7</td><td>&lt;0.001</td></tr>
-          <tr><td>Age</td><td>−0.16</td><td>−0.27 to −0.05</td><td>0.002</td></tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</div>
 
 
 ---
