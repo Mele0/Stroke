@@ -103,8 +103,6 @@ All analysis is performed in R (`main_analysis.R`) using:
 | – Moderate               | 420 (42%)        | 197 (41%)           | 223 (43%)     |
 | – Severe                 | 151 (15%)        | 69 (14%)            | 82 (16%)      |
 
----
-
 ### Table 2: Logistic Regression – Predictors of ESSVR Completion
 
 | Predictor               | Adjusted OR | 95% CI           | p-value |
@@ -113,8 +111,6 @@ All analysis is performed in R (`main_analysis.R`) using:
 | Self-Employed          | 2.52        | 1.18 – 5.60      | 0.019   |
 | Severe Stroke          | 0.43        | 0.25 – 0.73      | 0.002   |
 | Age (per year)         | 0.97        | 0.94 – 0.99      | 0.037   |
-
----
 
 ### Table 3: Cox Model – Return to Work
 
@@ -126,8 +122,6 @@ All analysis is performed in R (`main_analysis.R`) using:
 | Severe Stroke                  | 0.53  | 0.43 – 0.66      | <0.001  |
 | Age (per year)                | 0.98  | 0.97 – 0.99      | <0.001  |
 | Male (vs. Female)              | 1.26  | 1.09 – 1.47      | 0.002   |
-
----
 
 ### Table 4: Linear Model – Health Score at 12 Months
 
