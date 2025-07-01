@@ -1,79 +1,110 @@
-# Stroke Rehabilitation and Return-to-Work Analysis
+# 🧠 Stroke Rehabilitation and Return-to-Work Analysis
 
-This project evaluates the effectiveness of an early stroke specialist vocational rehabilitation (ESSVR) programme in supporting return to work (RTW) and improving quality of life among stroke survivors in England. Using a randomized controlled trial framework, we analyze clinical, demographic, and socioeconomic data to uncover predictors of programme success and health recovery.
+This project investigates the effectiveness of an Early Stroke Specialist Vocational Rehabilitation (ESSVR) programme in improving return-to-work (RTW) rates and health outcomes among stroke survivors. Using randomized controlled trial (RCT) data, we analyze the clinical, demographic, and occupational factors that influence programme success, long-term reintegration into employment, and post-stroke quality of life.
 
-## 🎯 Project Objectives
+## 📍 Background
 
-- Identify demographic and clinical factors influencing successful completion of the ESSVR programme.
-- Evaluate the impact of ESSVR on return-to-work rates within the first and second half-year after stroke.
-- Assess whether ESSVR improves long-term health outcomes, using a composite score of mood, functionality, and quality of life.
+Stroke is one of the leading causes of disability in the UK and globally. In England alone, ~60,000 people experience a stroke annually, and about 40% of these are of working age (18–69 years). Fewer than half return to work, which may lead to loss of income, identity, and psychosocial well-being.
 
-## 📄 Study Design
+ESSVR is a structured intervention delivered by occupational therapists. It involves:
+- Individual assessment of stroke-related challenges at work
+- Employer and family education
+- Work preparation and skills practice
+- Planning and monitoring phased return-to-work pathways
 
-The trial enrolled 1,058 individuals aged 18–69 from four English regions who experienced a stroke between May and November 2020 and were employed pre-stroke. Participants were randomized 1:1 to either:
-
-- **ESSVR + Usual Care**  
-- **Usual Care Alone**
-
-Participants were followed for 12 months post-randomization, and multiple data points were collected: demographic information, stroke severity, work history, RTW dates, and composite health scores.
-
-## 🧠 Methodology
-
-Data cleaning addressed inconsistencies in return-to-work dates and status flags. Three primary analyses were conducted:
-
-**1. Logistic Regression**  
-Identified predictors of ESSVR completion. Variables included stroke severity, age, sex, region, pre-stroke work status, and hours worked.
-
-**2. Cox Proportional Hazards Model**  
-Evaluated RTW over time, splitting follow-up into 0–6 and 6–12 month intervals. Interaction terms between ESSVR and time were used to isolate delayed programme effects.
-
-**3. Linear Regression**  
-Tested whether ESSVR improved health-related quality of life at 12 months, adjusting for demographic and clinical covariates.
-
-All analyses used complete-case records and were implemented in R (v4.2.1) with the `survival` package.
-
-## 📊 Key Findings
-
-### ESSVR Completion
-- Participants with **permanent** (aOR = 1.88, p = 0.031) or **self-employed** (aOR = 2.52, p = 0.019) status pre-stroke were significantly more likely to complete the ESSVR programme.
-- Severe stroke (aOR = 0.43, p = 0.002) and increased age reduced odds of completion.
-
-### Return to Work
-- No significant RTW benefit observed in the first 6 months (HR = 1.35, p = 0.319).
-- From 6–12 months, ESSVR significantly improved RTW (HR = 2.00, p = 0.028), suggesting a delayed positive effect.
-- Stroke severity, contract type, and sex also influenced RTW. Fixed-term contracts were associated with reduced RTW rates (HR = 0.62, p < 0.001).
-
-### Health Outcomes
-- No significant impact of ESSVR on composite health scores (β = 1.38, p = 0.100).
-- Stroke severity and age were significant predictors of lower health outcomes.
-- Severe strokes reduced scores by over 8 points on average compared to mild strokes.
-
-## 🌍 Implications
-
-The ESSVR programme effectively increases workforce reintegration between 6 and 12 months post-stroke, especially for individuals with stable employment histories. However, its impact on broader health recovery is limited, indicating that RTW support must be complemented by additional therapeutic strategies to enhance post-stroke quality of life.
-
-## 🔒 Limitations
-
-- Potential recall bias in self-reported RTW dates.
-- Minor inconsistencies in RTW flagging required exclusion of affected records.
-- A 12-month follow-up may be insufficient to observe full health benefits.
-
-## 📂 Data Overview
-
-The dataset includes the following key variables:
-
-- `sex`, `age`, `region`
-- `work_status_pre`, `hpw_pre` (hours/week)
-- `stroke_severity`, `alloc` (group allocation)
-- `rtw_flg`, `rtw_dte`, `exit_assessment_dte`
-- `essvr_complete_flg`, `health_score`
-
-## 📈 Visualizations
-
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Mondrian_Partitioning.png" width="400"/>
-  <br>
-  <em>Figure: ESSVR return-to-work effectiveness over time stratified by sex.</em>
-</p>
+The trial compared ESSVR (plus usual care) against usual care alone in 1,058 participants over a 12-month period.
 
 ---
+
+## 📁 Dataset Overview
+
+Key variables include:
+- **Demographics**: `sex`, `age`, `region`
+- **Occupation pre-stroke**: `work_status_pre`, `hpw_pre` (hours per week)
+- **Clinical**: `stroke_severity`
+- **Trial arm**: `alloc` (ESSVR or usual care)
+- **Outcomes**:
+  - `rtw_flg` and `rtw_dte` (return-to-work status and date)
+  - `health_score` (composite score at 12 months)
+  - `essvr_complete_flg` (ESSVR completion for intervention group)
+
+---
+
+## 🧪 Objectives & Analysis Strategy
+
+The analysis is divided into three main aims, implemented in `scripts/main_analysis.R`.
+
+### ✅ **Aim 1 – Predictors of ESSVR Completion**
+
+We analyzed which pre-stroke factors predict whether participants allocated to ESSVR completed the full programme. 
+
+**Approach**:
+- Logistic regression on ESSVR participants only
+- Key predictors: age, stroke severity, sex, work status, hours worked
+
+**Key Findings**:
+- Permanent (aOR = 1.88) and self-employed (aOR = 2.52) participants had higher odds of completion
+- Severe stroke reduced completion likelihood (aOR = 0.43)
+- Age negatively correlated with completion (aOR = 0.97 per year)
+
+### 🔁 **Aim 2 – Return to Work Outcomes**
+
+We examined how ESSVR impacts the timing and likelihood of returning to work.
+
+**Approach**:
+- Cox proportional hazards model
+- Time-split analysis: 0–6 months vs. 6–12 months post-stroke
+- Stratified models by sex
+
+**Key Findings**:
+- No ESSVR benefit in first 6 months (HR = 1.35, p = 0.319)
+- Significant RTW benefit between 6–12 months (HR = 2.00, p = 0.028)
+- Fixed-term workers returned less (HR = 0.62), and men had higher RTW rates
+
+### 💙 **Aim 3 – Health and Quality of Life**
+
+We evaluated whether ESSVR improves self-reported health (composite score 0–100) at 12 months.
+
+**Approach**:
+- Linear regression
+- Adjusted for age, stroke severity, region, and work status
+- Stratified by sex
+
+**Key Findings**:
+- ESSVR had no statistically significant effect on health score (β = 1.38, p = 0.10)
+- Moderate and severe strokes associated with significant score reductions (up to −8.3 points)
+- Older age linked to lower scores, especially in men
+
+---
+
+## 📊 Code Summary
+
+All analysis is performed in R (`main_analysis.R`) using:
+
+- `glm()` for logistic and linear regressions
+- `coxph()` from the `survival` package for time-to-event analysis
+- `survSplit()` for time interval partitioning
+- `ggsurvplot()` and `forestplot()` for visualization
+- Complete-case analysis used to handle inconsistencies
+
+---
+
+## 📌 Conclusion
+
+This study demonstrates that ESSVR significantly increases return-to-work success in the 6–12 month post-stroke period but has limited impact on overall health scores. Understanding the nuances of stroke severity, age, and employment context can inform more targeted rehabilitation policies.
+
+---
+
+## 📚 Citation
+
+If using this repository or findings, please cite:
+
+> Meléndez, A. *Effectiveness of an Early Vocational Rehabilitation Programme to Support Return to Work for Stroke Survivors*. Imperial College London, 2025.
+
+---
+
+## 📬 Contact
+
+For questions or collaboration inquiries, contact:  
+**Alex Meléndez** – `amr24@ic.ac.uk`
+
