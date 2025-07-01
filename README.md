@@ -61,7 +61,7 @@ We examined how ESSVR impacts the timing and likelihood of returning to work.
 - Significant RTW benefit between 6–12 months (HR = 2.00, p = 0.028)
 - Fixed-term workers returned less (HR = 0.62), and men had higher RTW rates
 
-### 💙 **Aim 3 – Health and Quality of Life**
+### ⚙️ **Aim 3 – Health and Quality of Life**
 
 We evaluated whether ESSVR improves self-reported health (composite score 0–100) at 12 months.
 
