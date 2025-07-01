@@ -136,17 +136,20 @@ All analysis is performed in R (`main_analysis.R`) using:
 
 ## 📈 Figures
 
-<p align="center">
-  <img src="Results/Plots/aim_1_log_OR.png" width="500"/>
-  <br>
-  <em>Figure 1. Forest plot of odds ratios for return to work.</em>
-</p>
-
-<p align="center">
-  <img src="Results/Plots/aim_2_cox_HR.png" width="500"/>
-  <br>
-  <em>Figure 2. Forest plot of hazard ratios for return to work.</em>
-</p>
+<table>
+  <tr>
+    <td>
+      <img src="Results/Plots/aim_1_log_OR.png" width="400">
+      <br>
+      <em>Figure 1. Forest plot of odds ratios for return to work.</em>
+    </td>
+    <td>
+      <img src="Results/Plots/aim_2_cox_HR.png" width="400">
+      <br>
+      <em>Figure 2. Forest plot of hazard ratios for return to work.</em>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <img src="Results/Plots/effect_sex.png" width="500"/>
