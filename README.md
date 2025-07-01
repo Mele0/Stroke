@@ -151,13 +151,6 @@ All analysis is performed in R (`main_analysis.R`) using:
   </table>
 </div>
 
-<p align="center">
-  <img src="Results/Plots/effect_sex.png" width="500"/>
-  <br>
-  <em>Figure 3. Predicted health score at 12 months by age and sex.</em>
-</p>
-
-
 ---
 
 ## 📌 Conclusion
