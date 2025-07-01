@@ -77,7 +77,7 @@ We evaluated whether ESSVR improves self-reported health (composite score 0–10
 
 ---
 
-## 📊 Code Summary
+## 🧠 Code Summary
 
 All analysis is performed in R (`main_analysis.R`) using:
 
