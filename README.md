@@ -145,7 +145,7 @@ All analysis is performed in R (`main_analysis.R`) using:
 
 ## 📌 Conclusion
 
-This study demonstrates that ESSVR significantly increases return-to-work success in the 6–12 month post-stroke period but has limited impact on overall health scores. Understanding the nuances of stroke severity, age, and employment context can inform more targeted rehabilitation policies.
+This study demonstrates that early vocational rehabilitation (ESSVR), when combined with usual care, significantly enhances return-to-work outcomes for stroke survivors—particularly in the 6 to 12 months following the stroke. Completion of the ESSVR program was more likely among individuals with stable pre-stroke employment and less likely among those with severe strokes or older age, underscoring the influence of baseline characteristics on rehabilitation success. Although ESSVR did not lead to measurable improvements in health-related quality of life within the first year, its consistent effect across regions and demographic subgroups supports its scalability. The lack of impact on broader health outcomes suggests that ESSVR alone is not sufficient to address the full spectrum of post-stroke recovery needs, and highlights the importance of integrating complementary interventions to support physical and psychosocial well-being.
 
 ---
 
