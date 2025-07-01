@@ -91,22 +91,7 @@ All analysis is performed in R (`main_analysis.R`) using:
 ## 📊 Key Results Summary
 
 <div align="center">
-  <h3>Table 1: Participant Characteristics by Trial Arm</h3>
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr><th>Variable</th><th>Overall (N=1002)</th><th>Usual Care (N=481)</th><th>ESSVR (N=521)</th></tr>
-    <tr><td><b>Age (median, IQR)</b></td><td>62 (55–65)</td><td>62 (56–66)</td><td>62 (56–67)</td></tr>
-    <tr><td><b>Hours Worked/Week</b></td><td>40 (25–45)</td><td>40 (30–45)</td><td>40 (25–45)</td></tr>
-    <tr><td><b>Male</b></td><td>652 (65%)</td><td>311 (65%)</td><td>341 (65%)</td></tr>
-    <tr><td><b>Female</b></td><td>350 (35%)</td><td>170 (35%)</td><td>180 (35%)</td></tr>
-    <tr><td><b>Stroke Severity</b></td><td></td><td></td><td></td></tr>
-    <tr><td>  Mild</td><td>431 (43%)</td><td>215 (45%)</td><td>216 (41%)</td></tr>
-    <tr><td>  Moderate</td><td>420 (42%)</td><td>197 (41%)</td><td>223 (43%)</td></tr>
-    <tr><td>  Severe</td><td>151 (15%)</td><td>69 (14%)</td><td>82 (16%)</td></tr>
-  </table>
-</div>
-
-<div align="center">
-  <h3>Table 2: Logistic Regression – Predictors of ESSVR Completion</h3>
+  <h3>Table 1: Logistic Regression – Predictors of ESSVR Completion</h3>
   <table border="1" cellpadding="6" cellspacing="0">
     <tr><th>Predictor</th><th>Adjusted OR</th><th>95% CI</th><th>p-value</th></tr>
     <tr><td>Permanent</td><td>1.88</td><td>1.06 – 3.33</td><td>0.031</td></tr>
@@ -117,7 +102,7 @@ All analysis is performed in R (`main_analysis.R`) using:
 </div>
 
 <div align="center">
-  <h3>Table 3: Cox Model – Return to Work</h3>
+  <h3>Table 2: Cox Model – Return to Work</h3>
   <table border="1" cellpadding="6" cellspacing="0">
     <tr><th>Variable</th><th>HR</th><th>95% CI</th><th>p-value</th></tr>
     <tr><td>ESSVR (0–6 months)</td><td>1.35</td><td>0.74 – 2.27</td><td>0.319</td></tr>
@@ -130,7 +115,7 @@ All analysis is performed in R (`main_analysis.R`) using:
 </div>
 
 <div align="center">
-  <h3>Table 4: Linear Model – Health Score at 12 Months</h3>
+  <h3>Table 3: Linear Model – Health Score at 12 Months</h3>
   <table border="1" cellpadding="6" cellspacing="0">
     <tr><th>Variable</th><th>Effect Estimate (β)</th><th>95% CI</th><th>p-value</th></tr>
     <tr><td>ESSVR</td><td>1.38</td><td>−0.3 to 3.1</td><td>0.100</td></tr>
